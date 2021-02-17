@@ -1,0 +1,18 @@
+<div class = 'buttons-container'>
+    <a routerLink = '/list-cards'>
+        <button>Back</button>
+    </a>
+    <a routerLink = '/add-card'>
+        <button>Add Card</button>
+    </a>
+</div>
+
+<div class = 'content-box' *ngFor = 'let card of cardArray'>
+    <h2>{{card.card_number}}</h2>
+    <p>{{card.card_holder}}</p>
+    <p>{{card.exp_date}}</p>
+    <p>NGN{{card.amount}}</p>
+    <div class = 'buttons-container'>
+        <button (click) = 'onDeleteClicked(card.id)'>Delete</button>
+    </div>
+</div>

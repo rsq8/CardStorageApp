@@ -1,0 +1,26 @@
+<div>
+    <div class = 'content-box' *ngFor = 'let Card of cardinject'>
+        <!--<a routerLink = '/list-cards/{{list-cards.id}}'>-->
+            <h3>{{Card.card_number}}</h3>
+            <p>{{Card.card_holder}}</p>
+            <p>{{Card.exp_date}}</p>
+            <p>{{Card.amount}}</p>
+       <!--</a>-->
+    </div>
+</div>
+<div>
+    <div class = 'content-box' *ngFor = 'let Card of cards | async'>
+        <!--<a routerLink = '/list-cards/{{list-cards.id}}'>-->
+            <h3>{{Card.card_number}}</h3>
+            <p>{{Card.card_holder}}</p>
+            <p>{{Card.exp_date}}</p>
+            <p>{{Card.amount}}</p>
+       <!--</a>-->
+    </div>
+</div>
+<div class = 'button-container'>
+    <a routerLink = '/add-card'>
+        <button>Add Card</button>
+    </a>
+</div>
+

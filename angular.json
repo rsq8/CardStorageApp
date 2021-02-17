@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "payment-processor"
+  "defaultProject": "payment-processor",
+  "cli": {
+    "analytics": "1520cd46-830c-41d5-9927-d2ac54a9640c"
+  }
 }

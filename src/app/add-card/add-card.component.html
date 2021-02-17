@@ -1,0 +1,49 @@
+<div>
+    <h2>Select Card</h2>
+    <div class = 'content-box' *ngFor = 'let Card of cards | async'>
+            <h3>{{Card.card_number}}</h3>
+            <p>{{Card.card_holder}}</p>
+            <p>{{Card.exp_date}}</p>
+            <p>NGN{{Card.amount}}</p>
+            <div class = 'button-container'>
+                <button (click) = 'onDelete(Card.card_number)' >Remove Card</button>
+                <button>Pay NGN{{Card.amount}}</button>
+            </div>
+    </div>
+</div>
+<div class = 'content-box'>
+    <h2>Add New Card</h2>
+    <form (ngSubmit) = 'onButtonClicked()'>
+        <div>
+            <label for = 'card_number'>
+                Card Number:
+            </label>
+            <input id = 'card_number' name = 'card_number' type = 'number' [(ngModel)] = 'card_number'/>
+        </div>
+        <div>
+            <label for = card_holder>
+                Card Holder:
+            </label>
+            <input id = card_holder name = card_holder type = 'text' [(ngModel)] = card_holder/>
+        </div>
+        <div>
+            <label for = 'exp_date'>
+                Exp:
+            </label>
+            <input id = 'exp_date' name = 'exp_date' type = 'month' [(ngModel)] = 'exp_date'/>
+        </div>
+        <div>
+            <label for = 'CCV'>
+                CCV:
+            </label>
+            <input id = 'CCV' name = 'CCV' type = 'number' max= '999' [(ngModel)] = 'CCV'/>
+        </div>
+        <div>
+            <label for = 'amount'>
+                Amount:
+            </label>
+            <input id = 'amount' name = 'amount' type = 'number' min = '1' [(ngModel)] = 'amount'/>
+        </div>
+        <button type = 'submit'>Add Card</button>
+    </form>
+</div>
