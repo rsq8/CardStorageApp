@@ -1,3 +1,14 @@
+# CardStorageApp
+##Simple add payment method interface
+
+1. This angular program was written using Visual Code.
+2. The program runs on port 4200.
+3. The URL for the back end can be edited in the proxy.json.config file found in the  project root folder.
+4. By default the server runs on port 8000 (can be changed as above).
+5. Click on add card on the welcome page (after entering the details). Ngrx displays the added card on the top of the page.
+6. If you would like to be redirected to a new page, uncomment the last line in the add-card.component.ts file.
+7. The pay button does not do anything. It may be linked to a payment page or anything else as required.
+
 # PaymentProcessor
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.6.
